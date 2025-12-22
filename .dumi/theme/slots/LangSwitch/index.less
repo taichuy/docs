@@ -1,0 +1,89 @@
+@import (reference) '~dumi/theme-default/styles/variables.less';
+
+.dumi-default-lang-switch {
+  position: relative;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+
+  &-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: @c-text-secondary;
+    transition: color 0.3s;
+    gap: 4px;
+
+    [data-prefers-color='dark'] & {
+      color: @c-text-secondary-dark;
+    }
+
+    &:hover {
+      color: @c-primary;
+
+      [data-prefers-color='dark'] & {
+        color: @c-primary-dark;
+      }
+    }
+
+    > svg {
+      fill: currentColor;
+    }
+  }
+
+  &-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+    background-color: @c-site-bg;
+    border: 1px solid @c-border-light;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    min-width: 120px;
+    animation: dumi-lang-switch-menu-show 0.2s ease-out;
+
+    [data-prefers-color='dark'] & {
+      background-color: @c-site-bg-dark;
+      border-color: @c-border-less-dark;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    li {
+      padding: 8px 16px;
+      color: @c-text;
+      cursor: pointer;
+      transition: all 0.3s;
+      white-space: nowrap;
+
+      [data-prefers-color='dark'] & {
+        color: @c-text-dark;
+      }
+
+      &:hover,
+      &.active {
+        color: @c-primary;
+        background-color: fade(@c-primary, 10%);
+
+        [data-prefers-color='dark'] & {
+          color: @c-primary-dark;
+          background-color: fade(@c-primary-dark, 15%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes dumi-lang-switch-menu-show {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
