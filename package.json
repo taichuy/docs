@@ -2,33 +2,58 @@
   "name": "taichuy",
   "version": "0.0.1",
   "description": "A static site based on dumi",
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
-    "build": "dumi build",
-    "preview": "dumi preview",
-    "prepare": "husky install && dumi setup"
-  },
-  "authors": [
-    "docs.taichuy.com"
-  ],
   "license": "MIT",
+  "scripts": {
+    "build": "dumi build",
+    "dev": "dumi dev",
+    "lint": "npm run lint:es && npm run lint:style",
+    "lint:es": "eslint --ext .js,.jsx,.ts,.tsx --fix .",
+    "lint:style": "stylelint \"**/*.{css,less}\" --fix",
+    "prepare": "husky install && dumi setup",
+    "preview": "dumi preview",
+    "start": "npm run dev"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
   },
   "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
     "*.{md,json}": [
-      "prettier --write --no-error-on-unmatched-pattern"
+      "prettier --write"
     ]
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.50.1",
+    "@typescript-eslint/parser": "^8.50.1",
     "dumi": "^2.4.13",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
-  }
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^16.26.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-order": "^7.0.0"
+  },
+  "authors": [
+    "docs.taichuy.com"
+  ]
 }
