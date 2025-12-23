@@ -8,7 +8,9 @@ toc: content
 
 ---
 
-During our taichuy team's extensive use of NocoBase for developing internal systems, we have accumulated a series of practical plugins. Adhering to the open-source spirit, we share some simple and practical plugins for free. Meanwhile, to balance R&D costs, we charge for some plugins that are complex and require significant development investment, to support continuous development.
+During our taichuy team's extensive use of NocoBase for developing internal systems, we have accumulated a series of practical plugins.
+
+Adhering to the open-source spirit, we share some simple and practical plugins for free. Meanwhile, to balance R&D costs, we charge for some plugins that are complex and require significant development investment, to support continuous development.
 
 ## 📋 Plugin Classification
 
@@ -41,21 +43,34 @@ During our taichuy team's extensive use of NocoBase for developing internal syst
 4. **Get Plugin** - Package users get files directly; source code users get repository access.
 
 ### License Terms
-- ✅ **Allowed**: Internal use, secondary development integration, production environment deployment.
+- ✅ **Allowed**: Internal use, secondary development integration
 - ✅ **Allowed**: Code modification and customization according to business needs.
+- ⚠️ **Restricted Allowed**: Integration into commercial products for sale (**Must follow NocoBase Official License**: Community/Standard editions are for internal use only; Pro/Enterprise editions can sell integrated systems)
 - ❌ **Prohibited**: Reselling the original plugin package after repackaging.
+- ❌ **Prohibited**: Disclosing or distributing plugin source code to any third party.
 - ❌ **Prohibited**: Claiming to be the original author of the plugin.
 - ❌ **Prohibited**: Using our brand name for promotion.
 
 ## 📜 License and Liability Disclaimer
 
+### ⚖️ NocoBase Official License Compliance (Important)
+
+This series of plugins follows the definitions and specifications for "Commercial Plugins" in the [NocoBase Official License Agreement](https://www.nocobase.com/en/agreement). Please be sure to understand the following rights and restrictions consistent with the official agreement:
+
+1. **AGPL-3.0 Exemption**: After purchasing this commercial plugin, your modifications and integrated applications of this plugin **do not need to be open-sourced** (according to Official License Article 8.5).
+2. **Commercial Distribution Restrictions** (according to Official License Article 9.5):
+   - **NocoBase Community/Standard Edition Users**: This plugin is for **internal use only** and **cannot** be integrated into systems sold to customers.
+   - **NocoBase Pro/Enterprise Edition Users**: Can integrate this plugin into upper-level applications to sell to customers.
+3. **Source Code Protection**: Regardless of the type of license purchased, it is **strictly prohibited** to disclose the source code of commercial plugins to any third party (according to Official License Article 9.4).
+
 ### Usage Rights
 - ✅ **Allowed**: Internal use, secondary development, integration into self-use systems.
-- ✅ **Allowed**: Integration into commercial products as part of the project.
+- ✅ **Allowed**: Integration into commercial products (Provided you hold a NocoBase Pro/Enterprise license).
 - ✅ **Allowed**: Code modification and customization according to business needs.
 
 ### Restrictions
 - ❌ **Prohibited**: Directly copying and reselling the original plugin package (unmodified).
+- ❌ **Prohibited**: Open-sourcing or privately distributing plugin source code to third parties.
 - ❌ **Prohibited**: Claiming to be the original author of the plugin.
 - ❌ **Prohibited**: Using our brand name for promotion.
 
@@ -106,8 +121,8 @@ In your product documentation, if our plugin is integrated, it is recommended to
 ## 📞 Contact Us
 
 **GitHub Organization**: [taichuy](https://github.com/taichuy)  
-**Technical Consultation**: Add WeChat Official Account `taichuy-com` or Email `taichu2021@gmail.com`
+**Technical Consultation**: Follow WeChat Official Account `taichuy-com` or Email `taichu2021@gmail.com`
 
-WeChat Official Account:
+Official Account:
 
-<img src="./index.assets/%E5%A4%AA%E5%88%9D%E5%85%AC%E4%BC%97%E5%8F%B7.jpg" alt="Taichu WeChat Official Account" style="zoom: 33%;" />
+<img src="./index.assets/%E5%A4%AA%E5%88%9D%E5%85%AC%E4%BC%97%E5%8F%B7.jpg" alt="Taichu Official Account" style="zoom: 33%;" />

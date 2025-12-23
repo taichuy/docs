@@ -20,8 +20,9 @@ export default defineConfig({
         {
           children: [
             { title: '简介', link: '/nocobase' },
-            { title: '首页插件', link: '/nocobase/home-plugin' },
             { title: '父级筛选传递值', link: '/nocobase/parent-filter' },
+            { title: '太初y登录插件-lite', link: '/nocobase/plugin-login-lite' },
+            { title: '太初y登录插件-pro', link: '/nocobase/plugin-login-pro' },
           ],
         },
       ],
@@ -29,8 +30,10 @@ export default defineConfig({
         {
           children: [
             { title: 'Introduction', link: '/en-US/nocobase' },
-            { title: 'Home Plugin', link: '/en-US/nocobase/home-plugin' },
-            { title: 'Parent Filter Value Transfer', link: '/en-US/nocobase/parent-filter' },
+            { title: 'plugin-block-filters-value', link: '/en-US/nocobase/parent-filter' },
+            { title: 'plugin-login-lite', link: '/en-US/nocobase/plugin-login-lite' },
+            { title: 'plugin-login-pro', link: '/en-US/nocobase/plugin-login-pro' },
+
           ],
         },
       ],
