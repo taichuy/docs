@@ -15,6 +15,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["typings.d.ts", ".dumirc.ts", ".dumi/**/*", "docs/**/*"],
+  "include": ["typings.d.ts", ".dumirc.ts", "docs/**/*"],
   "exclude": ["node_modules", "dist", ".dumi/tmp"]
 }
