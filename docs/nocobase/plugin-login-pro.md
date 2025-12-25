@@ -14,9 +14,9 @@ NocoBase 登录页自定义配置插件 (Pro 专业版)。
 ## 主要功能
 
 - **自定义登录页**: 完整的登录页外观配置（背景、Logo、布局等）。
-- **微信服务号扫码登录**: 支持通过微信服务号（Service Account）发送带参数二维码，用户扫码后关注公众号即可完成登录或注册。
+- **微信服务号扫码登录**: 支持通过微信服务号（Service Account）发送带参数二维码，用户扫码后关注公众号即可完成登录或注册。（注意一定是认证服务号才可以这样做）
 - **小程序接入**: 提供小程序登录配置，支持与 NocoBase 账号体系打通。
-- **统一身份认证**: 在微信生态下（公众号、小程序），实现用户身份的唯一标识和统一管理。
+- **统一身份认证**: 在微信生态下（公众号、小程序），需要手动在微信开发者（https://open.weixin.qq.com/）联通之后，才可以实现用户身份的唯一标识和统一管理。
 
 ## 使用说明
 
@@ -27,6 +27,147 @@ NocoBase 登录页自定义配置插件 (Pro 专业版)。
     - **微信公众号配置**: 配置微信服务号相关参数。
     - **微信小程序配置**: 配置微信小程序相关参数。
 4.  **应用配置**: 在配置列表中，打开对应配置的“启用”开关。
+
+## 内容展示：
+
+插件已经完成多语言化支持中文和英文。
+
+<img src="./plugin-login-pro.assets/image-20251225151147456.png" alt="image-20251225151147456" style="zoom:50%;" />
+
+![image-20251225152014741](./plugin-login-pro.assets/image-20251225152014741.png)
+
+![image-20251225151939762](./plugin-login-pro.assets/image-20251225151939762.png)
+
+![](./plugin-login-pro.assets/image-20251225160750406.png)
+
+![image-20251225160808556](./plugin-login-pro.assets/image-20251225160808556.png)
+
+## 配置微信服务号扫码登录
+
+首先在认证中新增：
+
+![image-20251225163543703](./plugin-login-pro.assets/image-20251225163543703.png)
+
+<img src="./plugin-login-pro.assets/image-20251225163840133.png" alt="image-20251225163840133" style="zoom:50%;" />
+
+只有在认证器中添加认证之后，公众号才会介入 nocobase 的认证体系中，与 nocobase 用户绑定
+
+建议标识使用：wechat-official
+
+![image-20251225164032745](./plugin-login-pro.assets/image-20251225164032745.png)
+
+开始配置公众号信息：
+公众号需要先添加再调试，因为只有保存配置文件，才能在扫码认证中会回调消息
+
+其中认证器标识，要与我们上面的一致，我们默认是 wechat-official
+
+![image-20251225165352027](./plugin-login-pro.assets/image-20251225165352027.png)
+
+前往微信开发者后台配置服务号回调消息：
+
+参考文档：https://developers.weixin.qq.com/doc/subscription/guide/dev/push/
+
+一定要先添加，要不然数据库中没有数据，微信后台回调解码验证是过不了
+
+```http
+http(s):IP+端口///api/wechat/callback
+```
+
+![image-20251225170433998](./plugin-login-pro.assets/image-20251225170433998.png)
+
+依次按照操作点击上面三个按钮来诊断配置是否有问题
+
+检查结果正常之后那么就可以正常页面使用了。
+
+本插件的微信扫码登录采用"参数二维码"机制，具体交互流程如下：
+
+1.  **获取二维码**
+
+    - 前端向插件后端请求登录二维码。
+    - 后端生成唯一的场景值 `sceneStr`（作为本次登录会话的标识），并将其存储在 `other_message` 集合中。
+    - 后端调用微信接口 `qrcode/create` 生成带参数的二维码，并将二维码 URL 和 `sceneStr` 返回给前端。
+
+2.  **用户扫码**
+
+    - 用户使用微信扫描二维码。
+    - **未关注用户**：扫码后进入关注页，关注后微信推送 `subscribe` 事件（带场景值）。
+    - **已关注用户**：扫码后直接进入公众号会话，微信推送 `SCAN` 事件（带场景值）。
+
+3.  **回调处理**
+
+    - 微信服务器将事件推送到插件配置的回调 URL (`/api/wechat/callback`)。
+    - 插件后端验证签名，解析 XML 数据。
+    - 根据 OpenID 查找系统中绑定的用户：
+      - **已绑定**：直接匹配现有用户。
+      - **未绑定**：若开启"自动注册"，则自动创建新用户并绑定；否则仅记录扫码状态。
+    - 后端根据回调中的 `EventKey` (即 `sceneStr`) 找到对应的 `other_message` 记录，将识别到的用户 ID 更新到该记录中，并将状态标记为已扫码。
+
+4.  **轮询登录**
+    - 前端使用 `sceneStr` 定时轮询后端接口 (`/api/wechat/scan-result`)。
+    - 一旦后端检测到该 `sceneStr` 对应的记录已有用户 ID，即生成登录 Token (JWT)。
+    - 前端接收 Token，完成登录跳转。
+
+对应接口已经 swagger 中：
+![image-20251225171759206](./plugin-login-pro.assets/image-20251225171759206.png)
+
+下面就是消息推送表
+
+建议设置定时任务清理过期推送消息：
+
+![image-20251225170549789](./plugin-login-pro.assets/image-20251225170549789.png)
+
+可以自行搭建区块表进行管理的调试
+
+![image-20251225171956668](./plugin-login-pro.assets/image-20251225171956668.png)
+
+## nocobase 作为小程序后端：
+
+![image-20251225172344808](./plugin-login-pro.assets/image-20251225172344808.png)
+
+配置小程序：
+
+![image-20251225191110310](./plugin-login-pro.assets/image-20251225191110310.png)
+
+小程序认证接口：
+
+参考微信小程序登录参考文档：
+
+https://developers.weixin.qq.com/miniprogram/dev/api/open-api/login/wx.pluginLogin.html
+
+```http
+curl --location --request POST 'https://域名+端口/api/auth:signIn' \
+--header 'x-authenticator: 在用户认证你填入标识' \
+--header 'Content-Type: application/json' \
+--data-raw '{"code":"用户标志凭证（code）"}'
+```
+
+nocobase 登录成功之后返回值：
+
+```shell
+{
+    "data": {
+        "user": {
+            "createdAt": "2025-12-25T11:13:00.498Z",
+            "updatedAt": "2025-12-25T11:13:00.498Z",
+            "systemSettings": {},
+            "id": 12,
+            "nickname": "微信用户-06cIBC6E",
+            "username": "wx_1766661180496_7lumpuk3",
+            "createdById": null,
+            "updatedById": null,
+            "email": null,
+            "phone": null,
+            "passwordChangeTz": null,
+            "appLang": null
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyLCJ0ZW1wIjp0cnVlLCJpYXQiOjE3NjY2NjExODAsInNpZ25JblRpbWUiOjE3NjY2NjExODA2MTYsImV4cCI6MTc2Njc0NzU4MCwianRpIjoiNGNjOGQyNDUtZDcxZi00MWI0LThhOWEtZDU4Y2UwOTVmYjU2In0.6VymIeIBF0o8uGzOmjYsgFqlbdCany3vgy0i2MBkIlI"
+    }
+}
+```
+
+后续开发者 token 就是用户 nocobase 认证信息了
+
+![image-20251225191320467](./plugin-login-pro.assets/image-20251225191320467.png)
 
 ## 配置项说明
 
