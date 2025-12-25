@@ -109,6 +109,30 @@ body {
       flex: 1;
       min-width: 0; // fix flex overflow
     }
+
+    .dumi-default-doc-layout-toc-wrapper {
+      position: sticky;
+      top: 100px;
+      width: 220px;
+      margin-left: 48px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      flex-shrink: 0;
+
+      @media (width <= 1100px) {
+        display: none;
+      }
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
   }
 }
 

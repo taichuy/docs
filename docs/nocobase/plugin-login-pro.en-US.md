@@ -186,7 +186,6 @@ Used to customize the appearance and behavior of the login page.
 | **Webpage embed URL**         | Input        | The URL of the webpage to embed (iframe). Visible when "Webpage embed" is selected.     | -                      |
 | **HTML embed code**           | Text Area    | Custom HTML code to render. Visible when "HTML embed" is selected.                      | -                      |
 | **Open login methods**        | Checkbox     | Allowed login methods. Supports: **Password Login**, **WeChat Official Account Login**. | Password Login         |
-| **Copyright settings**        | Markdown     | Copyright text displayed at the bottom of the page. Supports Markdown.                  | Powered by NocoBase    |
 | **ICP filing information**    | Markdown     | ICP filing or additional footer information. Supports Markdown.                         | Modified by taichuy    |
 | **Background theme color**    | Color Picker | The background color of the entire login page.                                          | #000                   |
 | **Font color**                | Color Picker | The primary text color of the page.                                                     | #fff                   |
