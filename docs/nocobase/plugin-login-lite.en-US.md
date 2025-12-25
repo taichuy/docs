@@ -20,6 +20,18 @@ This plugin allows you to customize the appearance and behavior of the NocoBase 
 3.  **Add Configuration**: Click the "Add" button to create a new "Home configuration".
 4.  **Apply Configuration**: Toggle the "Enable" switch in the configuration list to apply your settings. Only one "Home configuration" can be enabled at a time.
 
+## Demo
+
+![image-20251225111506531](./plugin-login-lite.assets/image-20251225111506531.png)
+
+<img src="./plugin-login-lite.assets/image-20251225111100864.png" alt="image-20251225111100864" style="zoom:50%;" />
+
+![image-20251225111433689](./plugin-login-lite.assets/image-20251225111433689.png)
+
+Configuration Home
+
+![image-20251225111323992](./plugin-login-lite.assets/image-20251225111323992.png)
+
 ## Configuration Options
 
 The following table describes the available options in the configuration form:
@@ -47,7 +59,7 @@ The following table describes the available options in the configuration form:
 
 ## More Features (Pro Version)
 
-If you need more advanced features, such as **WeChat Official Account QR Code Login**, please contact us to purchase the paid plugin. Delivery and pricing are as follows:
+If you need more advanced features, such as **WeChat Ecosystem Integration (WeChat Official Account QR Code Login, WeChat Mini Program Unified User Authentication)**, please contact us to purchase the paid plugin. Delivery and pricing are as follows:
 
 | License Type                     | Price        | Benefits Included                                                                                                                               | Suitable Scenarios                                             |
 | -------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
