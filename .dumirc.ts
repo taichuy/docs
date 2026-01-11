@@ -8,11 +8,11 @@ export default defineConfig({
     nav: {
       'zh-CN': [
         { title: 'NocoBase插件', link: '/nocobase' },
-        { title: '太初y', link: 'https://y.taichu.xyz' },
+        { title: '太初y', link: 'https://www.taichuy.com' },
       ],
       'en-US': [
         { title: 'NocoBase Plugins', link: '/en-US/nocobase' },
-        { title: 'taichu Y', link: 'https://y.taichu.xyz' },
+        { title: 'taichu Y', link: 'https://www.taichuy.com' },
       ],
     },
     sidebar: {
@@ -20,9 +20,17 @@ export default defineConfig({
         {
           children: [
             { title: '简介', link: '/nocobase' },
+            {
+              title: 'nocobase插件打包示例',
+              link: '/nocobase/plugin-build-example',
+            },
             { title: '父级筛选传递值', link: '/nocobase/parent-filter' },
-            { title: '太初y登录插件-lite', link: '/nocobase/plugin-login-lite' },
-            { title: '太初y登录插件-pro', link: '/nocobase/plugin-login-pro' },
+            { title: '登录配置-lite', link: '/nocobase/plugin-login-lite' },
+            {
+              title: '登录插件-pro：接入微信',
+              link: '/nocobase/plugin-login-pro',
+            },
+            { title: '邮箱认证', link: '/nocobase/plugin-auth-email' },
           ],
         },
       ],
@@ -30,10 +38,22 @@ export default defineConfig({
         {
           children: [
             { title: 'Introduction', link: '/en-US/nocobase' },
-            { title: 'plugin-block-filters-value', link: '/en-US/nocobase/parent-filter' },
-            { title: 'plugin-login-lite', link: '/en-US/nocobase/plugin-login-lite' },
-            { title: 'plugin-login-pro', link: '/en-US/nocobase/plugin-login-pro' },
-
+            {
+              title: 'plugin-build-example',
+              link: '/en-US/nocobase/plugin-build-example',
+            },
+            {
+              title: 'plugin-block-filters-value',
+              link: '/en-US/nocobase/parent-filter',
+            },
+            {
+              title: 'plugin-login-lite',
+              link: '/en-US/nocobase/plugin-login-lite',
+            },
+            {
+              title: 'plugin-auth-email',
+              link: '/en-US/nocobase/plugin-auth-email',
+            },
           ],
         },
       ],
