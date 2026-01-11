@@ -1,4 +1,4 @@
-﻿---
+---
 title: 太初y认证：邮件
 order: 0
 toc: content
@@ -47,7 +47,7 @@ Your verification code is {{code}}
 
 配置内容示例：
 
-![image-20260110234345181](./plugin-auth-email.assets/image-20260110234345181.png)
+![image-20260111130630438](plugin-auth-email.assets/image-20260111130630438.png)
 
 ![image-20260110235442885](./plugin-auth-email.assets/image-20260110235442885.png)
 
@@ -57,6 +57,6 @@ Your verification code is {{code}}
 
 输入验证码登录成功，对于新增用户，会自动开启注册，也支持邮箱登录验证密码
 
-![image-20260110235716782](./plugin-auth-email.assets/image-20260110235716782.png)
+![image-20260111130703898](plugin-auth-email.assets/image-20260111130703898.png)
 
 可以在这里设置是否自动注册
