@@ -61,11 +61,11 @@ The following table describes the available options in the configuration form:
 
 If you need more advanced features, such as **WeChat Ecosystem Integration (WeChat Official Account QR Code Login, WeChat Mini Program Unified User Authentication)**, please contact us to purchase the paid plugin. Delivery and pricing are as follows:
 
-| License Type                     | Price        | Benefits Included                                                                                                                               | Suitable Scenarios                                             |
-| -------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Package License**              | $45          | 1. Specific version plugin package<br>2. One-time buyout, permanent usage license<br>3. Basic installation guidance                             | Stable production deployment, no frequent updates required     |
-| **Package + Source Code Access** | $90/1st Year | 1. Includes all benefits of Package License<br>2. GitHub private repository access for one year<br>3. Continuous update support within one year | Need to follow NocoBase upgrades or require deep customization |
-| **Source Code Renewal**          | $45/Year     | 1. Continue GitHub private repository access after renewal<br>2. Continuous update support during the renewal period                            | Existing package users continuing to get updates               |
+| License Type                     | Price        | Benefits Included                                                                                                                               | Suitable Scenarios                                                                     |
+| -------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Package License**              | $45          | 1. Specific version plugin package<br>2. One-time buyout, permanent usage license<br>3. Basic installation guidance                             | Stable production deployment, no frequent updates required                             |
+| **Package + Source Code Access** | $90/1st Year | 1. Includes all benefits of Package License<br>2. GitHub private repository access for one year<br>3. Continuous update support within one year | Need to follow NocoBase upgrades or require secondary development based on source code |
+| **Source Code Renewal**          | $45/Year     | 1. Continue GitHub private repository access after renewal<br>2. Continuous update support during the renewal period                            | Existing package users continuing to get updates                                       |
 
 For more details: [Taichuy's NocoBase Plugins](https://docs.taichuy.com/en-US/nocobase)
 

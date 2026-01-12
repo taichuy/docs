@@ -23,11 +23,11 @@ Adhering to the open-source spirit, we share some simple and practical plugins f
 
 ### Paid Plugin Licensing Options
 
-| License Type                     | Price        | Benefits Included                                                                                                                               | Suitable Scenarios                                             |
-| -------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Package License**              | $45          | 1. Specific version plugin package<br>2. One-time buyout, permanent usage license<br>3. Basic installation guidance                             | Stable production deployment, no frequent updates required     |
-| **Package + Source Code Access** | $90/1st Year | 1. Includes all benefits of Package License<br>2. GitHub private repository access for one year<br>3. Continuous update support within one year | Need to follow NocoBase upgrades or require deep customization |
-| **Source Code Renewal**          | $45/Year     | 1. Continue GitHub private repository access after renewal<br>2. Continuous update support during the renewal period                            | Existing package users continuing to get updates               |
+| License Type                     | Price        | Benefits Included                                                                                                                               | Suitable Scenarios                                                                     |
+| -------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Package License**              | $45          | 1. Specific version plugin package<br>2. One-time buyout, permanent usage license<br>3. Basic installation guidance                             | Stable production deployment, no frequent updates required                             |
+| **Package + Source Code Access** | $90/1st Year | 1. Includes all benefits of Package License<br>2. GitHub private repository access for one year<br>3. Continuous update support within one year | Need to follow NocoBase upgrades or require secondary development based on source code |
+| **Source Code Renewal**          | $45/Year     | 1. Continue GitHub private repository access after renewal<br>2. Continuous update support during the renewal period                            | Existing package users continuing to get updates                                       |
 
 ### Licensing Notes
 
