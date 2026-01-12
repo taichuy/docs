@@ -1,4 +1,4 @@
----
+﻿---
 title: 太初y认证：邮件
 order: 0
 toc: content
@@ -55,7 +55,7 @@ Your verification code is {{code}}
 
 {{code}}是必填的，这个就是随机生成验证码的占位符
 
-![image-20260110233747392](./plugin-auth-email.assets/image-20260110233747392.png)
+![image-20260112104056054](./plugin-auth-email.assets/image-20260112104056054.png)
 
 ## 最终-配置用户认证
 

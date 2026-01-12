@@ -1,4 +1,4 @@
----
+﻿---
 title: plugin-auth-email
 order: 0
 toc: content
@@ -55,7 +55,7 @@ Your verification code is {{code}}
 
 `{{code}}` is mandatory, as it serves as the placeholder for the randomly generated verification code.
 
-![image-20260110233747392](./plugin-auth-email.assets/image-20260110233747392.png)
+![image-20260112104056054](./plugin-auth-email.assets/image-20260112104056054.png)
 
 ## Final Step - Configure User Authentication
 
