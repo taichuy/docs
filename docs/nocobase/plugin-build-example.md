@@ -1,4 +1,4 @@
-﻿---
+---
 title: 插件打包示例
 order: 0
 toc: content
