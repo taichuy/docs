@@ -1,4 +1,4 @@
----
+﻿---
 title: plugin-auth-email
 order: 0
 toc: content
@@ -76,3 +76,15 @@ Successfully logged in by entering the verification code. For new users, registr
 ![image-20260111130703898](./plugin-auth-email.assets/image-20260111130703898.png)
 
 You can set whether to enable automatic registration here.
+
+## About Email Verification (Optional)
+
+![image-20260114152357678](./plugin-auth-email.assets/image-20260114152357678.png)
+
+NocoBase has a verification feature. I noticed it for SMS, where SMS login is only possible if SMS verification is enabled. So, I've implemented a similar feature here. However, I haven't enforced strict restrictions—email login is still possible without binding. But I feel this might be useful for some people later, so I've included it here.
+
+![image-20260114153351897](./plugin-auth-email.assets/image-20260114153351897.png)
+
+![image-20260114153411707](./plugin-auth-email.assets/image-20260114153411707.png)
+
+After binding the email, the user's email field attribute will be automatically updated.

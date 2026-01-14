@@ -1,4 +1,4 @@
----
+﻿---
 title: 太初y认证：邮件
 order: 0
 toc: content
@@ -76,3 +76,15 @@ Your verification code is {{code}}
 ![image-20260111130703898](./plugin-auth-email.assets/image-20260111130703898.png)
 
 可以在这里设置是否自动注册
+
+## 关于邮箱验证（可选）
+
+![image-20260114152357678](./plugin-auth-email.assets/image-20260114152357678.png)
+
+nocobase 有一个验证功能，我看到短信有，只有开启了短信验证才可以进行短信验证登录，所以我这边照猫画虎也弄了一个，不过我没有做强制限制，不绑定也可以邮箱登录，但是感觉后续一些人可能会用的上，所以放上来。
+
+![image-20260114153351897](./plugin-auth-email.assets/image-20260114153351897.png)
+
+![image-20260114153411707](./plugin-auth-email.assets/image-20260114153411707.png)
+
+绑定邮箱之后，用户邮箱字段属性会自动更新
