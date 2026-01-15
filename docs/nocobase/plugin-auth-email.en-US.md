@@ -12,7 +12,7 @@ Enable the plugin to support email registration and login authentication in Noco
 
 <img src="./plugin-auth-email.assets/image-20260111131354184.png" alt="image-20260111131354184" style="zoom:50%;" />
 
-![image-20260110235451810](./plugin-auth-email.assets/image-20260110235451810.png)
+![image-20260115171855223](./plugin-auth-email.assets/image-20260115171855223.png)
 
 ### Fees:
 
