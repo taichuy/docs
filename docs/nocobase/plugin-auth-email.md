@@ -1,4 +1,4 @@
-﻿---
+---
 title: 太初y认证：邮件
 order: 0
 toc: content
@@ -73,13 +73,23 @@ Your verification code is {{code}}
 
 2.支持用户自行用户先注册设置密码，一键注册登录
 
-![image-20260115171444017](./plugin-auth-email.assets/image-20260115171444017.png)
+3.支持邮箱重置密码，指定验证码验证器
+
+![image-20260115195351982](./plugin-auth-email.assets/image-20260115195351982.png)
 
 ![image-20260115171855223](./plugin-auth-email.assets/image-20260115171855223.png)
 
 ![image-20260115171907088](./plugin-auth-email.assets/image-20260115171907088.png)
 
 ![image-20260115171919101](./plugin-auth-email.assets/image-20260115171919101.png)
+
+## 邮箱重置密码（可选）
+
+配置后支持邮箱重置用户密码，用户邮箱会自动读取当前用户用户邮箱，处于安全性考虑，只能通过读取用户邮箱，只读方式。
+
+![image-20260115195511274](./plugin-auth-email.assets/image-20260115195511274.png)
+
+![image-20260115195528111](./plugin-auth-email.assets/image-20260115195528111.png)
 
 ## 关于邮箱验证（可选）
 
