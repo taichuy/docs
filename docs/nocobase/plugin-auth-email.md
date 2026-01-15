@@ -55,27 +55,31 @@ Your verification code is {{code}}
 
 {{code}}是必填的，这个就是随机生成验证码的占位符
 
-![image-20260112104056054](./plugin-auth-email.assets/image-20260112104056054.png)
+![image-20260115171244254](./plugin-auth-email.assets/image-20260115171244254.png)
+
+邮箱内容支持 html，可以让 ai 生成专属 html 来生成
+
+![image-20260115172104190](./plugin-auth-email.assets/image-20260115172104190.png)
 
 ## 最终-配置用户认证
 
 ![image-20260110234033917](./plugin-auth-email.assets/image-20260110234033917.png)
 
-配置内容示例：
+### 配置内容示例：
 
-![image-20260111130630438](./plugin-auth-email.assets/image-20260111130630438.png)
+开启用户不存在自动登录之后：
 
-![image-20260110235442885](./plugin-auth-email.assets/image-20260110235442885.png)
+1.支持自动注册时使用管理员设置默认密码
 
-![image-20260110235451810](./plugin-auth-email.assets/image-20260110235451810.png)
+2.支持用户自行用户先注册设置密码，一键注册登录
 
-![image-20260110235559329](./plugin-auth-email.assets/image-20260110235559329.png)
+![image-20260115171444017](./plugin-auth-email.assets/image-20260115171444017.png)
 
-输入验证码登录成功，对于新增用户，会自动开启注册，也支持邮箱登录验证密码
+![image-20260115171855223](./plugin-auth-email.assets/image-20260115171855223.png)
 
-![image-20260111130703898](./plugin-auth-email.assets/image-20260111130703898.png)
+![image-20260115171907088](./plugin-auth-email.assets/image-20260115171907088.png)
 
-可以在这里设置是否自动注册
+![image-20260115171919101](./plugin-auth-email.assets/image-20260115171919101.png)
 
 ## 关于邮箱验证（可选）
 

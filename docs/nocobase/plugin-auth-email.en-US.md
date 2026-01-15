@@ -24,13 +24,13 @@ Enable the plugin to support email registration and login authentication in Noco
 
 For details, please visit: https://docs.taichuy.com/nocobase
 
-## 1. Dependency Check:
+## 1. Dependent Plugin Check:
 
-The Email Authentication plugin requires the following official native plugins to be enabled for full verification code delivery.
+The email verification plugin requires the following official native plugins to be enabled for full verification code sending functionality.
 
 ![image-20260110233406435](./plugin-auth-email.assets/image-20260110233406435.png)
 
-The following email notification plugin is not enabled by default and needs to be enabled in the plugin manager.
+The following Email Notification plugin is disabled by default and needs to be enabled in the Plugin Manager.
 
 ![image-20260110233333386](./plugin-auth-email.assets/image-20260110233333386.png)
 
@@ -38,7 +38,7 @@ The following email notification plugin is not enabled by default and needs to b
 
 ![image-20260110233516332](./plugin-auth-email.assets/image-20260110233516332.png)
 
-Below is an example of my personal 163 email configuration for notifications:
+Below is an example of my personal 163 mailbox notification configuration:
 ![image-20260110233606199](./plugin-auth-email.assets/image-20260110233606199.png)
 
 ## 3. Configure Verification Code and Email Content:
@@ -47,41 +47,45 @@ Below is an example of my personal 163 email configuration for notifications:
 
 Email verification code configuration content:
 
-Where:
+Among them:
 
 ```shell
 Your verification code is {{code}}
 ```
 
-`{{code}}` is mandatory, as it serves as the placeholder for the randomly generated verification code.
+`{{code}}` is required, which is the placeholder for the randomly generated verification code.
 
-![image-20260112104056054](./plugin-auth-email.assets/image-20260112104056054.png)
+![image-20260115171244254](./plugin-auth-email.assets/image-20260115171244254.png)
 
-## Final Step - Configure User Authentication
+The email content supports HTML, so you can have AI generate a dedicated HTML for it.
+
+![image-20260115172104190](./plugin-auth-email.assets/image-20260115172104190.png)
+
+## Final - Configure User Authentication
 
 ![image-20260110234033917](./plugin-auth-email.assets/image-20260110234033917.png)
 
-Configuration content example:
+### Configuration Content Example:
 
-![image-20260111130630438](./plugin-auth-email.assets/image-20260111130630438.png)
+After enabling automatic login for non-existent users:
 
-![image-20260110235442885](./plugin-auth-email.assets/image-20260110235442885.png)
+1. Support automatic registration using the default password set by the administrator.
 
-![image-20260110235451810](./plugin-auth-email.assets/image-20260110235451810.png)
+2. Support users to register and set their own passwords first, followed by one-click registration and login.
 
-![image-20260110235559329](./plugin-auth-email.assets/image-20260110235559329.png)
+![image-20260115171444017](./plugin-auth-email.assets/image-20260115171444017.png)
 
-Successfully logged in by entering the verification code. For new users, registration will be automatically enabled, and it also supports email login with password verification.
+![image-20260115171855223](./plugin-auth-email.assets/image-20260115171855223.png)
 
-![image-20260111130703898](./plugin-auth-email.assets/image-20260111130703898.png)
+![image-20260115171907088](./plugin-auth-email.assets/image-20260115171907088.png)
 
-You can set whether to enable automatic registration here.
+![image-20260115171919101](./plugin-auth-email.assets/image-20260115171919101.png)
 
 ## About Email Verification (Optional)
 
 ![image-20260114152357678](./plugin-auth-email.assets/image-20260114152357678.png)
 
-NocoBase has a verification feature. I noticed it for SMS, where SMS login is only possible if SMS verification is enabled. So, I've implemented a similar feature here. However, I haven't enforced strict restrictions—email login is still possible without binding. But I feel this might be useful for some people later, so I've included it here.
+NocoBase has a verification function. I saw it available for SMS, and SMS verification login can only be performed after enabling SMS verification. So I implemented a similar one here. However, I haven't imposed mandatory restrictions; users can still log in via email without binding. But I feel some people might find it useful later, so I've included it.
 
 ![image-20260114153351897](./plugin-auth-email.assets/image-20260114153351897.png)
 
